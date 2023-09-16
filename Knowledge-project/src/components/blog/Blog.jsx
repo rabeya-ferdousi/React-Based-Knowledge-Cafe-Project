@@ -2,7 +2,7 @@
 // import React, { useState } from 'react';
 import PropTypes from 'prop-types'; 
 import { FaBookmark } from 'react-icons/fa';
-const Blog = ({blog,handleAddToBookmark}) => {
+const Blog = ({blog,handleAddToBookmark,handleMarkAsRead}) => {
     // const [blogs,setBlogs] = useState([]);
     // useEffect(()=>{
     //     fetch('blogs.json').then(res=>res.json()).then(data=>setBlogs(data))
@@ -33,6 +33,9 @@ const Blog = ({blog,handleAddToBookmark}) => {
             hashtags.map((hash,idx) => <span key={idx}><a>#{hash}</a></span>)
            }
            </p>
+           <button 
+           onClick ={()=>handleMarkAsRead(reading_time)}
+           className='text-purple-800 font-bold underline'>Mark as Read</button>
            
         </div>
     )
