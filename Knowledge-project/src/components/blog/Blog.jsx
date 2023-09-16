@@ -7,7 +7,7 @@ const Blog = ({blog,handleAddToBookmark,handleMarkAsRead}) => {
     // useEffect(()=>{
     //     fetch('blogs.json').then(res=>res.json()).then(data=>setBlogs(data))
     // },[])
-    const {title,cover,author_img,author,reading_time,posted_date,hashtags} = blog;
+    const {id,title,cover,author_img,author,reading_time,posted_date,hashtags} = blog;
 
     return (
         <div className='mb-20 m-8'>
@@ -34,7 +34,7 @@ const Blog = ({blog,handleAddToBookmark,handleMarkAsRead}) => {
            }
            </p>
            <button 
-           onClick ={()=>handleMarkAsRead(reading_time)}
+           onClick ={()=>handleMarkAsRead(id,reading_time)}
            className='text-purple-800 font-bold underline'>Mark as Read</button>
            
         </div>

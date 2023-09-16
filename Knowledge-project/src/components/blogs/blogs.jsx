@@ -17,7 +17,7 @@ const Blogs = ({handleAddToBookmark,handleMarkAsRead}) => {
             key={blog.id} 
             blog={blog}
             handleAddToBookmark ={handleAddToBookmark}
-            handleMarkAsRead={handleMarkAsRead}
+            handleMarkAsRead ={handleMarkAsRead}
             >
             </Blog>)
            }
